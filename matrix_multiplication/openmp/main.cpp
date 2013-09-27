@@ -73,16 +73,7 @@ int main(int argc, char *argv[])
     nsecs = timer.nsecsElapsed();
 
     printf("%lld nsecs elapsed\n", nsecs);
-
-    for (i = 0; i < 2; i++)
-    {
-        for (t = 0; t < 3; t++)
-        {
-            printf("%d\t", c[i][t]);
-        }
-
-        printf("\n");
-    }
+    printf("Multiplied a (%dx%d) with (%dx%d) matrices\n", a_rows, a_cols, b_rows, a_cols);
 
     return 0;
 }

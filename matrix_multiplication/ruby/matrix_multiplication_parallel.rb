@@ -40,6 +40,15 @@ def matrix_multiply(a, b)
     end
 end
 
+a_rows, a_cols = rand(1000), rand(1000)
+b_rows, b_cols = a_cols, rand(1000)
+
+a, b = [], []
+
+a_rows.times { tmp = []; a_cols.times { tmp << (rand(500) - 250) }; a << tmp }
+b_rows.times { tmp = []; b_cols.times { tmp << (rand(500) - 250) }; b << tmp }
+
+=begin
 a = [
         [1, 2, 3],
         [2, -1, 2],
@@ -50,7 +59,10 @@ b = [
         [1, 3, -2],
         [2, 4, 2]
     ]
+=end
 
 c = matrix_multiply(a, b)
 
-puts c.inspect
+puts "#{ a_rows }x#{ a_cols } MUL #{ b_rows }x#{ b_cols }"
+
+#puts c.inspect
